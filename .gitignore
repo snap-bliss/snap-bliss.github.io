@@ -14,8 +14,12 @@ desktop.ini
 .vscode/
 *.tmp
 
-# 비디오 파일 (용량 초과로 GitHub에 업로드 불가)
+# 비디오 파일 (원본 - 용량 초과로 GitHub에 업로드 불가)
 *.mp4
 *.mov
 *.avi
 images/videos/
+
+# 웹용 압축 영상은 업로드 허용
+!images/videos_web/
+!images/videos_web/*.mp4
