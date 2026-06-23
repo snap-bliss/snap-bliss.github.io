@@ -1,0 +1,21 @@
+# 백업 및 임시 파일
+백업/
+md_backup/
+홈페이지 작업용 사진/
+2026.06.21 md파일/
+2026.06.21 md파일.md
+
+# OS 파일
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# 에디터 파일
+.vscode/
+*.tmp
+
+# 비디오 파일 (용량 초과로 GitHub에 업로드 불가)
+*.mp4
+*.mov
+*.avi
+images/videos/
