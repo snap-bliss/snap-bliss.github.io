@@ -1,4 +1,4 @@
-﻿// =============================================
+// =============================================
 // 스냅블리스 (SnapBliss) - Main JavaScript
 // =============================================
 
@@ -352,6 +352,30 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   console.log('✨ 스냅블리스 웹사이트 로드 완료 – 실제 포트폴리오 사진 적용');
+
+  // ─── Visitor Counter (hitscounter.dev API) ───
+  (function() {
+    const todayEl = document.getElementById('visitor-today');
+    const totalEl = document.getElementById('visitor-total');
+    const apiUrl = 'https://hitscounter.dev/api/hit?output=json&url=https%3A%2F%2Fsnapbliss.github.io&tz=Asia/Seoul';
+
+    fetch(apiUrl)
+      .then(function(res) { return res.json(); })
+      .then(function(data) {
+        if (data) {
+          if (todayEl && typeof data.today_hits !== 'undefined') {
+            todayEl.textContent = Number(data.today_hits).toLocaleString();
+          }
+          if (totalEl && typeof data.total_hits !== 'undefined') {
+            totalEl.textContent = Number(data.total_hits).toLocaleString();
+          }
+        }
+      })
+      .catch(function() {
+        if (todayEl) todayEl.textContent = '...';
+        if (totalEl) totalEl.textContent = '...';
+      });
+  })();
 
   // --- Video Thumbnail Time Offset ---
   // 영상 썸네일이 검은 화면이나 빈 배경으로 시작되는 것을 방지하기 위해

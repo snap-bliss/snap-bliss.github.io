@@ -72,10 +72,50 @@ a  { text-decoration: none; color: inherit; }
   transition: width 0.1s linear;
 }
 
+/* ─── Visitor Counter Bar ─── */
+.visitor-bar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 101;
+  height: 28px;
+  background: rgba(255, 248, 240, 0.97);
+  border-bottom: 1px solid rgba(232, 146, 122, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 5px;
+  padding: 0 5%;
+  font-size: 0.72rem;
+  font-weight: 400;
+  color: var(--text-light);
+  letter-spacing: 0.03em;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.visitor-label {
+  color: var(--text-light);
+  font-size: 0.68rem;
+  letter-spacing: 0.04em;
+}
+
+.visitor-count {
+  font-weight: 600;
+  color: var(--rose);
+  font-size: 0.75rem;
+  min-width: 20px;
+  text-align: center;
+}
+
+.visitor-sep {
+  color: var(--blush);
+  margin: 0 3px;
+}
+
 /* ─── Navigation ─── */
 header {
   position: fixed;
-  top: 0; left: 0; right: 0;
+  top: 28px; left: 0; right: 0;
   z-index: 100;
   padding: 0 5%;
   display: flex;
@@ -203,7 +243,7 @@ nav a:hover::after { width: 100%; }
 .mobile-nav {
   display: none;
   position: fixed;
-  top: 68px; left: 0; right: 0;
+  top: 96px; left: 0; right: 0;
   background: rgba(255, 248, 240, 0.98);
   backdrop-filter: blur(16px);
   padding: 20px 5% 30px;
@@ -252,7 +292,7 @@ nav a:hover::after { width: 100%; }
   justify-content: center;
   text-align: center;
   overflow: hidden;
-  padding: 100px 5% 60px;
+  padding: 128px 5% 60px;
 }
 
 .hero-bg {
@@ -1316,7 +1356,7 @@ footer {
   section { padding: 60px 4%; }
 
   /* 히어로 */
-  #hero { padding: 90px 5% 50px; min-height: 90vh; }
+  #hero { padding: 120px 5% 50px; min-height: 90vh; }
   .hero-title { font-size: clamp(2rem, 8vw, 3.2rem); }
   .hero-subtitle-kr { font-size: clamp(1.2rem, 5vw, 1.8rem); }
   .hero-desc { font-size: 0.9rem; margin-bottom: 28px; }
@@ -1375,7 +1415,7 @@ footer {
 @media (max-width: 480px) {
   section { padding: 50px 4%; }
 
-  #hero { padding: 80px 4% 44px; }
+  #hero { padding: 110px 4% 44px; }
   .hero-title { font-size: clamp(1.8rem, 9vw, 2.8rem); }
   .hero-btns { flex-direction: column; align-items: stretch; }
   .btn { width: 100%; justify-content: center; padding: 14px 20px; font-size: 0.9rem; }
